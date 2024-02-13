@@ -1,0 +1,88 @@
+.game {
+	width: 600px;
+	height:  400px;
+	/*border-bottom:  1px solid black;*/
+	border-bottom:  1px solid black;
+	border-image: linear-gradient(to left, #000 95%, transparent 95%) 100% 1;
+	margin: auto;
+}
+
+#mario {
+	width: 140px;
+	height: 250px;
+	background: url("../images/mario.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	transform: scale(0.3);
+	position: relative;
+	top: 235px;
+	left: 0px;
+}
+
+@keyframes run {
+	from { background-position: 0px;  }
+	to { background-position: -500px;  }
+}
+
+.jump {
+	animation:  jump 0.5s linear;
+}
+
+.run {
+	animation: run 0.7s steps(3) infinite;
+}
+
+.move {
+	animation:  move 0.8s linear infinite;
+}
+
+@keyframes jump {
+
+	0% {
+		top: 235px;
+	}
+
+	30% {
+		top:  200px;
+	}
+
+	50% {
+		top: 165px;
+	}
+
+	80% {
+		top:  200px;
+	}
+
+	100%{
+		top:  235px;
+	}
+}
+
+#cactus {
+
+	width: 50px;
+	height:  42px;
+	position: relative;
+	top: 110px;
+	left: 800px;
+	background-image: url("../images/cactus.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	animation:  move 2s linear infinite;
+}
+
+@keyframes move {
+
+	0% {
+		left: 600px;
+	}
+
+	50% {
+		left: 250px;
+	}
+
+	100% {
+		left: -40px;
+	}
+}
